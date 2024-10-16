@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>AGUTU INTERIOR AND DESIGN</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a href="#" class="navbar-brand">AGUTU CONSTRUCTION AND INTERIOR DESIGN</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#learn" class="nav-link">OUR SERVICES</a>
+            </li>
+            <li class="nav-item">
+              <a href="#questions" class="nav-link">OUR PROJECTS</a>
+            </li>
+            <li class="nav-item">
+              <a href="#instructors" class="nav-link">ABOUT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section
+      class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+    >
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>AGUTU CONSTRUCTION <span class="text-warning"> AND DESIGN </span></h1>
+            <p class="lead my-4">
+
+Welcome to agutu dennis Interior and Design
+
+Transforming spaces with creativity, elegance, and functionality.
+
+At agutu dennis Interior and Design, we believe that your space should be a reflection of your personality and lifestyle. With over a decade of experience in the industry, our team of dedicated professionals is committed to turning your vision into reality. Whether it's a cozy home makeover, a modern office redesign, or a complete commercial renovation, we bring a unique blend of artistry and practicality to every project.
+
+Explore our portfolio to see our diverse range of completed projects, and discover how we can elevate your space with innovative design solutions. From initial consultation to final installation, we ensure a seamless and enjoyable experience, tailored to your specific needs and preferences.
+
+Let’s create something extraordinary together. 
+            </p>
+            <button
+              class="btn btn-primary btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#enroll"
+            >
+              Sign up
+            </button>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="data:image/jpeg;base64,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"
+            alt="logo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-primary text-light p-5">
+      <div class="container">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <h3 class="mb-3 mb-md-0">Sign Up For Our Weakly updated</h3>
+
+          <div class="input-group news-input">
+            <input type="text" class="form-control" placeholder="Enter Email" />
+            <button class="btn btn-dark btn-lg" type="button">submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boxes -->
+
+    <section id="services" class="p-5" style="position: relative; overflow: hidden;">
+        <div style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 50%;
+          background: url('https://www.elegantproperties.co.ke/application/files/2116/9881/0083/sunpark-1.jpg') top center no-repeat;
+          background-size: cover;
+          opacity: 0.5;
+          z-index: -1;">
+        </div>
+        <div style="
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 50%;
+          background: url('https://www.elegantproperties.co.ke/application/files/3516/9881/0082/sunpark-6.jpg') bottom center no-repeat;
+          background-size: cover;
+          opacity: 0.5;
+          z-index: -1;">
+        </div>
+        <div class="container">
+          <div class="row text-center g-4">
+            <div class="col-md">
+              <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                  <div class="h1 mb-3">
+                    <i class="bi bi-house-door"></i>
+                  </div>
+                  
+                  <h3 class="card-title mb-3">Residential Design</h3>
+                  <p class="card-text">
+                    Transform your home into a sanctuary with our personalized residential design services. We blend comfort, style, and functionality to create spaces you'll love.
+                  </p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="card bg-secondary text-light">
+                <div class="card-body text-center">
+                  <div class="h1 mb-3">
+                    <i class="bi bi-briefcase"></i>
+                  </div>
+                  <h3 class="card-title mb-3">Commercial Design</h3>
+                  <p class="card-text">
+                    Enhance your business environment with our expert commercial design services. We create functional and inspiring spaces that boost productivity and reflect your brand.
+                  </p>
+                  <a href="#" class="btn btn-dark">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                  <div class="h1 mb-3">
+                    <i class="bi bi-hammer"></i>
+                  </div>
+                  <h3 class="card-title mb-3">Renovation & Remodeling</h3>
+                  <p class="card-text">
+                    Update and enhance your space with our comprehensive renovation and remodeling services. We manage every detail to ensure a smooth and successful transformation.
+                  </p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Learn Sections -->
+    <section id="learn" class="p-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="img/fundamentals.svg" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md p-5">
+            <div class="shaded-bg p-3 rounded"></div>
+            <h2 class="dark-blue-text">MAKING YOUR DREAM A REALITY</h2>
+            <p class="lead dark-blue-text">
+                Agutu interior and design is the best stop for you if you are looking towords quality and timely project delivery.
+            </p>
+            <p class="dark-blue-text">
+
+                <h2>Residential Design</h2>
+                <p>Creating Homes with Heart and Soul</p>
+                <p>At Thomca Interior and Design, we understand that your home is more than just a place to live—it's a sanctuary where memories are made. Our residential design services are tailored to transform your living space into a harmonious blend of comfort, style, and functionality.</p>
+      
+                <h3>Our Residential Design Services Include:</h3>
+                <ol>
+                  <li>
+                    <h4>Interior Design Consultation</h4>
+                    <ul>
+                      <li>Initial meetings to understand your vision, lifestyle, and design preferences.</li>
+                      <li>Space planning and layout optimization to maximize functionality and flow.</li>
+                      <li>Selection of color schemes, materials, and finishes that reflect your personal style.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>Custom Furniture and Decor Selection</h4>
+                    <ul>
+                      <li>Sourcing and selecting furniture, lighting, and accessories that complement your space.</li>
+                      <li>Custom-designed furniture pieces tailored to your needs and aesthetic.</li>
+                      <li>Incorporating unique decor elements to add character and charm.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>Kitchen and Bathroom Design</h4>
+                    <ul>
+                      <li>Designing modern, efficient, and beautiful kitchens with state-of-the-art appliances.</li>
+                      <li>Creating spa-like bathroom retreats with luxurious fixtures and fittings.</li>
+                      <li>Ensuring practical storage solutions and ergonomic layouts.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>Renovation and Remodeling</h4>
+                    <ul>
+                      <li>Comprehensive renovation services to update and enhance your home.</li>
+                      <li>Skilled project management to ensure timely and on-budget completion.</li>
+                      <li>Collaboration with trusted contractors and craftsmen for high-quality results.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>Space Planning and Optimization</h4>
+                    <ul>
+                      <li>Analyzing your current space and identifying areas for improvement.</li>
+                      <li>Innovative solutions to enhance space utilization and flow.</li>
+                      <li>Designing flexible, multi-functional spaces that adapt to your needs.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>Outdoor Living Spaces</h4>
+                    <ul>
+                      <li>Designing inviting patios, decks, and gardens that extend your living space.</li>
+                      <li>Selection of outdoor furniture and decor to create a cohesive outdoor environment.</li>
+                      <li>Incorporating elements like lighting, landscaping, and water features.</li>
+                    </ul>
+                  </li>
+                </ol>
+      
+                <h3>Our Process:</h3>
+                <ol>
+                  <li>
+                    <h4>Consultation</h4>
+                    <p>We start with an in-depth consultation to understand your needs, preferences, and budget. Our team listens carefully and gathers all necessary information to create a tailored design plan.</p>
+                  </li>
+                  <li>
+                    <h4>Design Development</h4>
+                    <p>Based on the consultation, we develop a comprehensive design concept, including mood boards, sketches, and 3D renderings. We collaborate with you to refine the design, ensuring it meets your expectations and lifestyle requirements.</p>
+                  </li>
+                  <li>
+                    <h4>Implementation</h4>
+                    <p>Once the design is finalized, we oversee every aspect of the implementation, coordinating with contractors, suppliers, and craftsmen. We manage timelines and budgets, ensuring a smooth and hassle-free process.</p>
+                  </li>
+                  <li>
+                    <h4>Final Reveal and Follow-Up</h4>
+                    <p>After the project is completed, we conduct a thorough review to ensure every detail is perfect. We provide ongoing support and follow-up to address any concerns and ensure your complete satisfaction.</p>
+                  </li>
+                </ol>
+      
+                <h3>Ready to Transform Your Home?</h3>
+                <p>Contact Thomca Interior and Design today to schedule your consultation and take the first step toward creating the home of your dreams.</p>
+
+
+            </p>
+            <a href="#" class="btn btn-light mt-3">
+              <i class="bi bi-chevron-right"></i> Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+        .dark-blue-text {
+          color: rgb(20, 9, 163); /* Dark blue color */
+          background-color: rgb(197, 219, 115);
+        }
+        #dark-blue-text{
+            background-color: rgb(112, 55, 126);
+        }
+      </style>
+
+<section id="learn" class="p-5 bg-dark text-light">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md p-5">
+          <h2>Transform Your Space</h2>
+          <p class="lead">
+            Discover the art of transforming spaces with our expert interior design services. We blend creativity, functionality, and style to create environments that inspire.
+          </p>
+          <p>
+            Whether you're looking to refresh a single room or undertake a complete renovation, our team of experienced designers will work with you every step of the way. From initial consultation to final reveal, we ensure a seamless and enjoyable process tailored to your vision.
+          </p>
+          <a href="#" class="btn btn-light mt-3">
+            <i class="bi bi-chevron-right"></i> Learn More
+          </a>
+        </div>
+        <div class="col-md">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxQUExYUExQWGBYZFhoaGRkaGhkZGRkfGRkZGRwaGR8aISsiGxwoHRkZIzQlKCwuMTExGSE3PDcwOyswMS4BCwsLDw4PHRERHTApISgwMTAwMjAwMjAwMDAuMDAwMDAuMTAyMDAwMDAwMDAwMDAwMjAwMDAwMDAwMDAwMDAwMP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAAIDBQYBBwj/xABTEAACAQIDBAYFBgoHBQYHAAABAgMAEQQSIQUxQVEGEyJhcZEjMoGhsUJyssHR8AcUM1Jic4KSs+EVJDRjdaLDQ3SDo8IWVGSFtNIlREVlhJOU/8QAGgEAAgMBAQAAAAAAAAAAAAAAAgMAAQQFBv/EADARAAIBAwIDBgYCAwEAAAAAAAABAgMRIRIxBEHwEzJRYXHBIoGRobHRM+EjssJS/9oADAMBAAIRAxEAPwD03LXLU+4O41xxWM0pjLUxjXXeoWkoWw0jpbnVNt/bqQoWY6cFHrMe6ltzbCxrzPyVG9jw+/8AO2Nx2NCMJZx1kzfk4hqFPAW4keQ477VnqVbYjlmqlQcsvYkIzE4rHPlW3Yj/ADV3gW4X82PcKbtDFCZBNi7w4QWEeHGkkxHq5gOH6I+q9AzyHrFedRPijrHAp7EV/lORpfdv7rWABE2FBaQyFlnxI9aRtMPhhyXhcchrzI1vntnXJ3fW37+hs0YsifF3kVWxgMUGghwUY9JJb1cwW37osBpu4kY4rZBixlXTqcBDqzW3dZl3jjbRRbjuoTDYjV3gdS1rS46W2VeawqdLcraeOldgkEas8TmJZLZsVKC+JnJ4QodbG2mngDa9Gk+uv7YDjYn2i5couLGY6dVs+DUADcZSLXA5myi2l9RTdoHMwjxA6xwB1eBw5tGgG7rnFhppvsOQNNiHVjIoeESa5V9Jj8R8469WO83tr6tMkgIHUkdWDr+K4chpn3drES/Ivx19porW66/fiyrcgbGSNK4jkXriu7CwELBGBqOtfdfTjoOVdxJ6zssVly2/q8PYw0djp10h9Yi24k9wFPVcymGNAVXRoYDliX/eJzbMeYX3078SXKOsZGjGioD1eFU33fnSkHkNb7qpyUcdddXDULgMzNMQoInCD8mno8JHa3rNue3t8BRGHwOdc8hEoXix6nBxW8fyhHKxq0XBs4GdQsY9TrFKp/w8Otnk/bIq3wOxXkIZULEbpZwrZf1UY9HH4gE8waim3hfRb/0BPTHLKKTCtIA7t1iDdJNeHCLyCRntzd3A86mOw3xFgiyTEcZV6rDjlkgWxIHDOQO+trgujUSt1kpMkn5zG5HcOQ+bYd1W6RgCwAA5DQVpp0pbvH5MlTiY8s/gyOB6BIbHEu0pHyNBGPmotkHtDHvrSYLZ0UQtHGq+A1899GhK7lrVGKWxinUlPdkJFLq6fPKqDMxCgcSbD31R4jpZEbrh0knb+7HY9sjWT31baW4Ki3sXBQUPjMTHGpZ2VQN5YgD31TOmPn3vHh0PBfSS2+cwyqf2T41Pg+h+GDB5Q07jXNMxkseYVuyp+aBV3L0pbsGPSlJDbCxS4g8DGto//wBj2T308bI2hP8AlJo8Mn5sQ62W3z3sqnwVq1EUYAsABUgFS5V0tkUGB6F4aMhnVpZN+eVjK1+ahtE/ZAq9jiCjQAeAqdUpwSgZTbYM3hUMl6PZahkT2VEy0V8gNQZaMnjoY2FW2FEaErjCpFNdYUpjED9X41ypcndXKgQRXSvI0hT6IWAYp2HfVBtrbvVDVTqcqjmSCdeQ0rRYwVjOmMQJhuLgTIT4BXNIqO0Wx9KOqSTKXH7a7ZyFXmI337EYPM/J+J7t9VC4w2domtwkxLe3sQjhx3VXnCBo4gt8smLZSBoCMx0Nu4CiUz5b2FxiuojUjsJu7QUaFr86UqSjzv6nRhVTw1YKgRY49cyI50Ua4ifnfiq9/f7KIUmQCIxghbEYdDaJOOaeT5R4291VOHkzOynOzlylwR1kjLckZzpHGANy66VMcUhjMfZA1HZusSHXcB25nHM6XFU4DYzTwi1kn3O7RsEtldlth4/1Ee+RuTHz4VzEQMWWYSzLI1ghbI88gJNykeU9Wo0sOz31T7PDLISHkkbcCwHWRgE8ZLpHcW1NzpuFaHD4a4UtftsDZC/pO9nHpsQfmgLv1qd1/wBASWqOVb5ncMsgUpGCrWHWdW15XsNWxGIYlYgd+VSSL6GpIMCFTK5UIx0jTOkTHlf8riW7hoeNWmGwDsQgBAXciqhKn9GNbxRncQXLvv0vWg2d0Za+Z2yEjUgl5GHJpG7Vu5coHKh+OT+Hr5i5VYQWWZuPBtYIwCgeqhTUDhkgU5UH6UhJHEVdbM6OyE5wuQ2t1j2eW36NxljHcqgd9aXBbMiiHYQA8+Pj40XTIcL/AO39P2Y6nFt4iVmB2DFGc1i78XbUn7fberHLT6rMf0jw8Ryl8z/mRgu/ku722rVGMKaxgySlObzksglJiBqTasxN0gxMv5GFYl/OlOZ/YiHf4mgX2WZe1iJZJf0WOWP9xdKvXfuonZ27zLvHdLcOhyoxlfcFiGfUcCR2QfE1XvtjFynsKkK827cnluU+w1LhMIqCygAbtBai4orfyokpPdl2itkVybFR2DTFpm5yHMPYvqj2AVbxQgCwFvCuLYU/rLUSSRTbZMmlERmg4yTRcEVS4NieNanRK5FFUwodwGIV2lXaJRKGkVDMpNTmo5d1DLBcdysmU8ftqDLRM1RUDY5I4BSIruamNIKW5DEjlvvpSqJsao+WP3qVVrC0sJFSVGpqQUdxdgbFrWQ6WLcxgcZB9Bq2eIGlY7pKLyRD9O/lG5pNd/436Gjh/wCReph8FHePDd2PYeZY1Ni1tEhAsRtWX6SURsuEGPCA6W2iwv4FzUm0EvEpta+15Bbldhp7qVqz8/dmxb262KfZcf8AWFNv/m5h/lam7Divow/2OJIv85d3fvqw2bB6ZRbfjpvcr6VPsbCHKh4dVjQB4Ov2+6rnPr6hqHX0IVwoGXJbLbB2Atl9KzByBuzEgamtx0OwKzo7yAraQqVUntBJHQZ2N2f1dxNtdwrN7Pw3YCnWxwVrcAHLeVabZOwZGiFiVs8rDUi+eQsp8vjSHWgndq+fYGv3LXsa+DDpGMqKFA4AWpO4HGuR3sL77C9QYrdXUi4uKcdjju98kGN21DF68gB4AasfADU1WzdJJX0hhyj8+U29oRbt52rJYvABpsS24ia1xv8AUQ+VYyWR/wAYkRnbIpGhNhw31m7dylJeBthwqwervh5ZT/WJncfmKerj8l1I8SaIwmAVBZFCjuAHw30zZIYpnLXN2GouOyxXnfhvvVijDkR4WYfUfjVU68Hlqz+oM6clhbEaQWH3FSCGpEAOgIJ5ag+R1p97HUVrjNS2Zmaa3IxCd1P6qpFNSgimAgwiqSOCiQRUqkUJVxmHwtSTYpUZFKuS5sMqMwHziBZfbyPI1PCahxG0IlZQ0iA39W4zeqeG+orcwG2GWpUE20R8iOVzyCFffJlHvqFsZOfViRR/eS2YexFYH96qlJIpJss6VVeeU75olHJYzmHgWcj/AC1EyIdHxEz9wYJ74lU++q7RE0st3YDUmwquxG2YdQsiuRvVLyN5Jc1CuAguD1Icjc0gLt+9Jc++pMViyiXC7rCwI46fJOgpc6lw4xyATbQkPqQSkHiQsY9vWMG91DEYhr/kYhzu8nmAEH+auHbhYDKALre4BNgN+o79LVWYvaUjW7BF5hGS9tB2rkWudbJY/pcKyyqNmuNPxLRMGWtnxTnujWNFPmGb/NUo2Rh/lq0ndI7yDyclR5VzDIbctSPI86nseNZZVJPmMcPMYuz8MN2HiH/DT7K5Utq5S9TK0IIUVKoriipVrrXM5BOND4GsX0i/tEI/T/0nrczjsnwPwrDbdF8XB88/wnpNX+OXox1DvozeyI/RYT/Em+MlE4uH0a/4y307fVTtkL6PC/4m/wDrUQzhgotu2ww82ZvrrM5O/wA/dmxPIHs6ICVCR/8AUpx/y5KN2BhSUUXBAGMC2/SkA18vdUmEhu6f4nP/AA5a03RTZqxxh3GoeUjweRm9ugHnSOIqW69S51VGLbBdm7DWN1JJYFU0ItYxeqe/1r+ytPs7Gg3XQ25cNbWrszRsBblofGgNigZpEZLMja2Y2N9Qdw3ix9tBw0Zdta934r0MNSp2kW2tg/ETC4POoZ6nkw620uNb7yePfUU4rq8NCcdWra+PczuzSMRGt5MV3Tn+HGfrrDbSgHXznkye25H2Vvol9Liv1/8ApR1isd/aJjb/AGi+7LWRu05W6ydmlsvQ9P2ID1K3Gva+kaMC1BswgRqNLi+n7RopaqOyM0nljGjB0NDbRd0iZlY6DcdRy3G9t9HWobay+if5tFa2UBe+Cpxm2GiK5lY5myqEBck6mwVQSdAeHCplx+JPq4dwOblEHtFyw8q7tKC8+G/X/wClL/Kjdsp2l8K6WprCMqinuDQSYhjZpIYz3Zpf/ZarJcHpd8RJbkoRF94zD96qsIQrWPyWFuGooeDCXS5JIZXNiT8oZviF8qW3J8wtCLxJMMLg+kI4OzPuNtzkga38jUMu22sBh4la12KryAsfV0GpHPda3JuDwIMgCqN1zuubsTrz9Y1cQbJCHMtr8fsHIUmSrS7nIj7KG+WVGI2zMpUPE3aGoU9pfdrRY2eX7ZBZMuYAtcnS9rW3+2icRs4yOGYAAC2/vB+2rGGIKoUbgLVopUZtf5BU6kbLSrMBhwNhbIo7zr7jxqVcBpYu37Nl+FG0qeqEUJc2C/iCbyLnmSTUG1wFQAC12APhYn6qsaB2wOyvzv8ApapUhFQdkXBvUrmNxMdoplHETH2ZgfdmNNxshtiAfkmFh4koT8RU84uZB+hiPilLaUGuI/SQH90Rj6q5cmkdEvIE7PtPv1p+SpMKnZ9g+AqTq6zXyLc8g2WlRGSlVE1nEqZRUCUQldVibkeI9U+B+FYfbP8AbMP+sP8ABetxij2T4H4Vhtt/2vDn+8P8GSk1P45ejHUO8iiwRPU4axt/8UbX2y1NhJeHLbR95ND4Q2hw3+Jv8Za5g37Xjtr7TWe2/q/yzdpwy32ebun+KYj+HNWgwG0QY1zX3zAAai0blddd5FqzuypPSJ/iWJ98cw+urHCN6Nf/AMz+LWLiVd9eYMo3x1zLLB7ajCqdSOwtrfnaDjVj0cxYlLyAWBIAB39m66+VYvCHsr8/D/C9aroC1420+W302o+Dhaqn1sBxVKMINo0TrQWJFWDUDiRvruI5qMXCPSYr9f8A6cdZCRb4mYcBJr7QtvrrYIPS4r9d/ppWTRv61N3yD3AVyZvMjt0dl6HrB2PcaFfKmNseQeqfI/bUG0cVIMRBlY5NAQDpqwDX/Z50f/TIyyMASE3c2tpfzroqjRfI5Tq1VzK/Eu8Kl5I2IG8gA/A1RS9N8G4eIy5W3WZWFjcaG4sL/XV/PtMzQyBh6o1A3tmBtl5e/WvE9sRBMbOmhtMoB52ZB7KCVCC7rY2k3PvLJ7Lj19Nhv1x/hS1PtcdpfCmY5fS4f9cf4cv86k2pvXwp73EgoGlvvvqLZ/5LD/qwfcR9dTR+so7x8a5s2P0UPdEPef5UEnYNFps8elPcB9M/ZV3VPsvWZ+5B9OSritNDu3MlXvHa5XaVOFipUqVQhyg9qeqPH/pajKE2p6h+/A0M1eLLjuZCA5mm8Jx7xVlj4Llu+KT3COqrB75/+N8RVhi5yCf1U3uEdcWqsnR9C9wq2UeA+AqXJQHXnsAcV+oU7rm/S8jWXUk7CHB73DclKq/rG5N5UqHUiaPMkWp0NDg1MhrslbjMYeyfA/CsNt1v61h/1h/gSVt8WeyfA/CsF0ofLPA3KU++GQfXSZ9yXo/wPoL44+pRxSWgw5/+5t8Zabg1bRha39M6c/WqCSS0MI5bSf6UlEbOJMS8/wCmCfrpVrJ+vuzemHbPn9Ig3H+kp/ekgo/Z2K7AvutjfdL/ADqrwCnroxa5/pOf6L1sukmysmHDoqgJBMGygDV0U30G7Mpv40ipBPrzZVSpGLUXzMnsrFZlT9ZhveCPqrZ/g+Po3/WP/EesFs+MRpobjPgviL/Gtp+DKa8L/rZf4jj6qZw8LTuusA8ZmmzYNQOJ40W7ig8Sd9dJHIRj1PpcV+t/00rK9T/WJTb/AGo+qtLHMvXYkEi/XCwuL/k1rN4uS08nEGT42rjTvraXWTuUWmvkauTpPCRc4ZSDu0XXjxFAzdMsMrZThfaAn8qqYNYVPcPcKqMenpPKvTRpx0rB5uU5KTyXO0/wi4ZFOWCdd+qsBa/g9ZnD7TknM0wc5FaMqrJGxsxAIYlTfzqp2smrD77yKO6JD+rz+MHvcCs/EwjCN4o1cHOUpWbPXdobQk6yJVVQ6ynmQbpJlYbjlI94IuaOxUhYi+8DUCqXpHdcRAwJUh7X0G9XPHTSxOunaPfQu0dpzHUYcMUGuYhSwLKG7N9QFudTw9lZHJp5DTL9D6RPH4U/Z35ND/dxfRY/XVZsuPLKnA5SSoZmUEKfVzbhpwtVrsxfRL8yL6H86qQxMsNjH00nzB/Ekq6qi2D+Vk+aPpvV7WyirRMlXvHaVKlThYqVKlUIcobaY9G3hRND7T/JP80/Cqlsy1uYvADSc98v0j9lS4yTtkf3WI+MVMwI7Ex75PpvXMYPSE8knHn1RrkVI5OlDYtBibTKv6CkeTqfgtOxm2DHlOgzOqi9tb8N++wqDEoeuUj8wD3n+dZbpggeWZSL+gcjS9isMjKR3g61h0Nzw7ZDjTjJrV4Gz/HH/NPmPtpVhuj227QJc8W+m1Kq7B+Y3sPI9DqRTUANOz112c8WLbsnwNYLphfrILb+uX+G9bXESaGsX0tF3isDo9zbWw6txc24UubSi15Gjh18afmZOVs0MVjv2i9va0lP2ViSI1BFidqX7gbaj30GQ6RRBgVy49rqRYi+q3vqPledSYKUNFcXJ/pPMO5SN/tNvdQtYfq/yzdTe3XJGk6LzAzM28ri8QQOWZgtxy0Zh7a9Cwz9aksbDsspU+DAg2868g2Lj+qxNmuA08u/QAFg4Pku/vFekbPxZEU7KbssfYHNrNYfvWFLsteds+5m4hatjBbMlzwlSb9rCDxOtvhWy/BY/oJO6V/pvWb2RgTHEkEhyzSNFIqENYJh2DPdgLBrX0NuHMVpPwdxGGKVZCMxldhb81mJG+x33qU0ou7G8RLVTaXj+jUzm4tcjTeLXHfrpVDisTDGyGWYghmILyWzE68SNwFgORO+9XLMCe6qrbWwI5mVzYlA2X9oWOm4i194O+ticXszlyi1yMjiseBNiGWHrY3cdpCGuQFy2Ubxe5zcNKosTjLSv1pCtmu2oAXcbg8rc6kiw6ibFmR2NnlQLmIvc5gTbebEi3jVJI8TyuAtlLBbXFi2/TkPhasXZxlJo1qUlFPY1ODxwZQuUgcG3qd9x3Nv07qptvYgqQy8Lb91etbMwGDESl4olJucqkSLvOqkDUHfqBvoho8GPVgB8EW3vrrUq0IU0pSOU6E5O6R8+YzFBycoZjpoqk8b8KtOjcZXDzhgVIEGhBBBEnEGvasRiEClY4lQ2tqQN45KKw+O6Jsxnk68emZMxCEhShFgNfDfzrNxPFQktKfh+TocJw8ovVI0vSNgJsOeIm9wilPxHuoLG5nGRS7OVYFVLZtdbqo3G531RdK9quJYe3cZiw0A+RIL7zuBPnR/4P8Abmad5CAMwjRjvNgZCPZcnzoG7u7BtbCD4cLPAxkmBCCNgpIsb5WsDdizMTV7sonqyNDYR2AIJsI1F7DUa331L0mnuUjyuQXW7LGzgBha5sCNzVkMSo6zJh8SdASgDIbhWCsFuR6rC2m425Go7J2JG7jc3OwktLJ8xfpPR+1tpR4eMyyEhRyBY+wCqHo5ipI7/jBYkpmzsMrHKLkcmFtRy1HKpMdPFi4ZgskgstyDlUX1ItcHitbISWnBmmm5ZLvZe0Y54xJEbqeYIO69iD40XWOh2thsJHArzvdrDKrK1jbN2wBpy1+qtVgsSsiB0Nwbj2qSpHsII9lMTuri3h2CKVKlVkOUJtb8k/h9YougduG0L+z6QqpbMtbmW2d+SlP6z+I9LaB1fwlH/LjP1UD/AEksOHZm+XJIg1tqZJTy5Kakk2zEATOGQliujx2UvGoym5vmtYgWvqNK5s45N8XgtsdJaVD3iqHGx58ZMv8AdOvnCo/6jT5ekeHmdCHdQxyq2QMhOnZzK2/2VYYHZjSztOrDIQ4NwwNysa2FxY+qde+kdlLVewxTilnwPIVx1gBc7gfMX+ulVniOg2OBt+LObBRoyEaKBprSpmhG3tIeK+p7EWpjy1AxNcC1oOSDbZxnVwSyE+pG7eSk15ZgYo5WwtkPWSdesh17TBCUYDdazbhpvrbfhQx3VYJ1HrSssSgak3OY+5SPbWXm2VNHisHhsOyiaPDlgW9UO18xOhuLgndxoZQuvt9jVQmooPxu2GaFFEEcjRwpO97oy5VyF2vvOh3a7qm6I7ZMrFZI44lMYmQrexAazEknkR4WN6zseLb8YxrO4ukDQsR6jtkZWAuQRd1LDQ6KdK7hsZ1EOCnGUlVmjdD8pWdigYfm2dvKs0+Hi4uL36ZpU8YPR4YUY5rK4ve4IYedF43ZqyxNGHaPNbtIQGFuHaBFvZVGuzsLigZcLJJC99ShKnXUEqbGx33BANVm1duY3ABTK8WIjZsikqVe9ibGw00G+7VljwNSm9UXcVKqp4Tz4MsW6JZRlGJly3JICYZV1tc2EWpNhw4Va9GOj0WGztGSWfKGJI1y3tYKFA9Y7hWHxnT2c5uqjjTKoZgQ7soZcwOpUbrVDJ00xJEa53vIpIK5YwLC/wAkE7jzpijxD7zx4fcjgrYPV5LDfp9++q3FbdgTRpo78swJ8lua8fxuOlmCyOzG8+SzMz2Avc3Y79KjjjIUtmN1xipobdk7xp405UHzZVkldnoO0ek+DZirKZL62yaG36y2tVLbawgDCPDxeqzjsoTZL5itoyLjuNZzDYW0y92PZfZZjTMOlolP9xjR5N/OpHhop7v6+v6ClUe1usHpuyJGfDPPOQEszKEudADfODfW4O41Z7JxSvA5VSuXOBfTcLgr3a+6gOimMjOCiU8Ub3k8PbRkWZVKDtbyLcQ2o04aGlOOlJ2B711cPnxQySMCBqd/zF51hE26I4DHLIDIXFgAdLZL7t2oJ1q/mwGMcWTq4xzNi+61wQNNAN1qBX8H5YlppnkYm5sctyd9996uMJSd2goOEFZsxmB2umKniiMbBWJQO10C3DAsMt72HA8xR3R3aEUGLmhC5QrKqsGZw5Umw5i4Y+Va2boBG1uwBbiCQ3mKrMR+DKQMWhaxzAgk3NxuNya1t3bxi3TMqsuZqNn7ck+Ux8OVXA2iwQvbhyql2TiDh1WKeINKB2njGa5Nz6p1ta26++1ubtsdIITHlhCZzb1h1YG865gLiwOgPCqT0rLKdpPETOYrHnr3TMSWUkllsdSWuCQGHEW5VadExmxBUlrFW3MVOnaGqkcqzJwMhmaZ3iF42CpES1yozC5ZuyTceyr3oVcSF5yI1CmxaRVYsbC2jX4nuNxTaU0DUg7Fh0v6PK0kSAXV3sqkLYMxFydNRc3N78avdk9EoYAvVkrlObsrElzpe5RA1jbdfdVbLFDPPHaRpGWxVgTcAAnQ7j7BxN99aPD4gsi2Zc40IbS9tCdOe/dWim8szTWEjuO2pHFYOTc7lAJPu3DxqrTparkiGGWS29hkVP32bKfYTWV6d4p5JnQEKoVUYKTc2AZhfTTUi3f32oqPGjq1kA9Esaug4DMAwJHE5TfxpNTiHF2Q6FBON2aD/tM//d/+dB/76WI2oZoWXqirG2meJhowO9X7qzn9LRZCZCokKs6RdmMHKL/JAZrXF7H2V49tvpLO08pMrkZmGjnLpp2bG1tKKm5z3YE4xhyPYIVSIf1h0UIzuFLroS8hzGzbsj8Tz0vaq3Z67OnEojmkdQ6ySKsjSItjnF+sGZiRGwIXQ2363rEdFejf4xH+MYqR0hJIRVIDyEbzdrhV0IvYk2O61z6F0Q2fhYFzYaMRuQPSN6R2B5M+4eAA3VcnCOOZI63ksdhYKHFQrJJFMsYbPFFIFjVRqqsRFlFiDcK2ozX5GjdlYefDnqzKjI0hIGRrRBmzBczObixte2+/PQKUAkMxLMGHrHMfEE7qrU2+VZkZhZHKm+7RiKU5BqHibGTPc2ZPKlWOi6R4gi8cMjpc5WC6MASLjWlS8h28i/xEvAUREdAaDEVTrIFUk6Aa09oAwPTzbUP9I4eOd8sUI6x9C13PaUWUE37KeZqqh2wj42fEkvkEXowey1gobKQu7QMPaL1e9CUEr4nGyAellOQm2iR6Ai+7l+zWIxW0nOHxMgcWxE9ilu3cMZAxJGi2JWwPyqqUbq3iaqbSbutlYm2diU/EsQCA00jZmJy3UF1Ucb3uWOg41c7S6ORZbgq0iJlVR1pY9WLBWIARLkcTxql2Nh4OujjheVgzoZM5UA5Lsewl9LA2JY7zV83SKJBnfMS1ytkuGueDDQ899ZqspRl8KbHxWqPgVx2biyI8rvGqqoZQQuW3yUZCSRbiWvTNsvKsEMcjBgsoN+0WLEMCzMzG+87rCo9pdOnOkcaAc2ux+q1Uk+1ZJn7UhdQVt2QovpwHto4qq1eVkvAG0FJeJfSRjrsUP/DQ/wDp1oawLYDvVvorRb/2jFd+GjI//nWgo2AOBP6L/AUD3fp/yHy+fuMRrRL3Y36z9tPZrxyHcfxxD8KhzAx6f9909tqnk/Jzd2Lj+Io+fz90BLb5ezDoV9N/5h8UNQYNbqi80xg82FTIPS/+Yr71pmFNjH3fjn0hVdfZka6+huOiexnkwaOsgUZGyrYm7agX1FhflWn6H4jrMJA5vdkBa/BtzDuswItVV+DzEWwMPKx+NSbF2rFh2xELmwWdnj5FZQJNCdLZ2ceyiisIzzy2arLXRYb6pptpmQejkCciLE+BuCpHtFDzYh/lhX7ySu/lfMnvFMQvS2X74lRuGvfcfz91ITXO/wBmnw1NZ4bSVB8tAb82X95CyjyFOj2qzD0eVxzuCPAhSD7r0xNAOBN0gXLKj23g6gEEMouN/gB51ECrLYrf0ZsdNAVjS7d4sfGmY3aoylCmfdohFxY3BC3VgdL3rN/9oeoYKwkyAsO0pVspDCxFraBjqNPCltxvgtRdjZHCQuxPVx/JJ7K6DrXR+H5unsoWSKNBmEUYNtQFBylg9rewK1uXsrL4bplrdpUZTqfRkfKJK+tc3OvgwvxvY7MxJxBtDl1Fs/aVQNASTu11045rbhpd77A6Wt2XGyzmnzHcEY3A0s4JFuQOYkd1ZvaM8izSOjlbux7J01Y8K3OzNn9UtkY3O8lQQfDLqB4msRi07bfOPxoat4pB0rNsh/pufQPkkG7tKD8QaKi2spTq3gUIBlsnZsALWAXdp3VXCO/CpUXu1pKd9x1gXanR/CzzLMMVNAwUqB2WtfQ2zAEaG3gKzWK/BPIxvBioHBO580Z9wYfCtdI9tNKgkZfzBrxGh91OVaS2FSpxYVjOik4jijSEOkaBey6ahVy233Plrehtn4TFxm34tKPBDl+Jrgnt6ruvKzEUjtadd2Ik9pB8rilXLLdlxZ3YeTyUfEi1c2D0AtI0+LIkd3ZxHvjS5JsR8s68dO7jVSm3cSdBiGHio+4qdNsYj5WII04DX73+FRt2KseixkAAWHkPtpVio9oyED0snmfsrlQmk5tDp/s+HQzq55Rgye9Rl8zWY23+ExMQjwwROoZGDSOVXKCLXAW99/Mb67sL8GuHLAP1sp5EiND7Fu3+arfaH4O1jeN4Y40jU3ddWd91hc3OW4vqTTpVYWsiRjlXPL49p4hwqjP1Me7Q5LA346XJ+NOnwzERws5XQuB2n1ky2VVXiVUH21uem2HVMNlW15JUQad+b/pqu6M7Ekl62ZJjFEzlFyqDIVTsjKzeqLaXHKrjNbpWHJPQ7u7ZX9GtmiAySMGXLAzXkAB7VkByrcroz6HU2qRtnPKgCo4Qa6qsEf7K2LNfnYX51pdi4COGXECO5t1aksxYscpckk8e2PIURjpzYgED78SdKQ6ic3J+RavFKKKrZfRKFVzOAx8NB5kt77d1Zfa0oZMMQLetm8esP2Vq3x0rC0Z3fLY6fs2tf4d9ZjbmCyKjZye2oy2CqDqdB7OfGijLU7lxvfIXBNmnnP8A4ZV8o7D3WoBZDbBE8Mw+FEwP6SQ88MvwIoSHVcJ85qC2fp/qxy9/dCD+jb/fAfeKIb1Z/wDeo/ewoaQDJJ3Yv6xRDtpie7ERH/MKY9/n7oB+37DZH9K3+/xH3Co89ivzsWPias8F0ZxE0jsFyJ+MI4d9AypbcPWO7lbvrUbO6FwRnNITK2d2F+yqlzdgFG8fOvVJXXXgDKaT68SLoPhutwMQY9nXS3f31d7O2FBEXKAqWtfUkHLcjTcPWbdz3VPDZAFUBQBYAAADwAouCMt99KJYQhu7uV82yVvdDa9rFCVYG+twBZtO6hTDIDYMgvvMgMRI+cg19o+utGuGA36/Co5oVO8A+PDw5ULvyZaZWQwZAGkV7/n2zLbuMRB8/KlNAk2qlWI3WyvYd98sgPtNSjZSqSY2dDruY5b8yL6+F7ULJhsQATLHFN+kp6qTf+dpbhzpTcrhKww4Fh2Qzdykl7+KSgMB4NS/FpN2VSD+aer/AMkoK29tcG1FQ9W0rxm/qTp1iHuD8u88qsoZHIvlJX86JxIh/Zfd7KikRoppdkQE3eLI3NlaI301zJdWPjVrsnZAj7SMLcyob/NGQR7RRKYuJb9tQRvAJRr8gjXVmoaaVXOq5eNiMjaWN2ZOzf7abTFyyWyY0k2C+LKQ3xs1qyW0QAz97H41oo7gAq5I5sA6nwI1tvrN48XLc+sPxNFWldIlKNmwG17n7m1cWRtPG3jTxvtw+96am6s6Y5kbPckffdQ8r31+4ohxqeetvv7KFn3VdwJER1+4po0veuoa4XJ3fVRoFjAt72sKJhlAGu8Aj360OzEDT7a7Ed191hu8dapsiRoMOwCjtHdyNKhiQefn/OlU1ENhh8CysG7NG4iYBdWA8f50EsMres5A5Lp76WIMUIuQC3C+pPnuoAjF/hI2XK0cckYUqjM2UEtIzEAIVVVtYEk3voK5sfDiKCKO2qoL8NTq3vJrdQnPZu7XdrfhWf6S4YQdseob+wjW1Ep4sE22rGOwbTv1pjKKGnclmBbRbRjKLi57B31OcEBYuxcji1vMAaD2Codk5kiRTvyhm8X7ZHmxp8xJ3k+yqduRG3ex2WcAVQ9KsRmiWw3SL8Gq1MfIVDj+jeInQCNLWYG7dlTa/wBtXB/EilhlEk/pGH9wo8iabsuFpFwojVnYO1woLEC+823Vtdkfg+VWEk7lmy2KqbJvva9rn3VpsDgI4VCRIiLfcqgD28zTevs0W52ePP8ANzG7K6BTOH65xGrS57L2n3ggH5IPtNa7ZewYICzJGC7EFnbtMSONzu9lqPjJtuvTUjeQkDT3edUC5NkjTb6fCrPuGnPhU2H2cq6t2j7qLLWqtQNiODBqB2tfhU57jUYkpwN6hBrSHjTkF6eq21prNfdp9dQh02FN8aRb7ikpqWId6sUE/R2InMmaNrWuhKnxJUhj50etTxmrsiXKLFbDntcyCc8FdVFhyuTfnrfjQZwjpYZXjtozA9gkXuQHsTuHq3rYJRKICLEA34HWjjHwFynZZMbhcad4yMT+b2H9uu/uqr2gbkkHexO/X1jxr0LFbMik9dAeHG3le1eV9KsO+Encx5nhbVlJJINhdkuT+7fgN1VVg0gqVRSY7Pv0+971M9tddDQOEx8UyXDXB8weRHA91Sld3L7Kzj2KZrHTwoaXwqSQ+e/lQ8m/fUBkRy/ff9VRhvvxp789KhzjedOJqwDk0mm/yvTo5bAMdwv7tfGhpCLe0eNKR+z3ajzH86otluuJB3Ee6lVPh8Q2Udvh3UquxLo9Mm2qx9XT41XYsk6k60qVRFh+w8ZlS2/XjXNsSLilbDksuYWbKBoPFuPgK5SoXuWVmM6JhVvGzEX1zNck/UfCwqLC7AB1Y0qVFEplthdlxpuUX5nWimSlSo0CjohvUkGEubDXx3VylRFB6YJV1Op91Odb91KlQkRCxtpULG5pUqplkyQ86ezW0rtKotyEUnfURalSoiHVepbA76VKiIdUEbjfuP21NDICeR5UqVWUEhrC/sFE4Y89/wB/dSpVcRNQleS1YbpPFnkJ53FKlV1Ni6O5h9rdHiGLxNkfiRuPcRuNV2H6SvEwTEC3asHXUHutvHvpUqVBKWGOk9OxdriVYX+/31ps2vtt9VKlSRgNK9tDrUUjCxpUqsWCzTDl3WqGSbhrb2UqVUiiPORw99KlSoyj/9k=" class="img-fluid" alt="Interior Design Example" />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+    <!-- Question Accordion -->
+    <section id="questions" class="p-5">
+
+        <section id="questions" class="p-5">
+            <div class="container">
+              <h2 class="text-center mb-4">What You Need to Know</h2>
+              <div class="accordion accordion-flush" id="questions">
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#question-one"
+                    >
+                      Where exactly are you located?
+                    </button>
+                  </h2>
+                  <div
+                    id="question-one"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#questions"
+                  >
+                    <div class="accordion-body">
+                      Agutu Interior and Design is located in Homabay Mbita road at Kakaeta building
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#question-two"
+                    >
+                      Our Design Philosophy
+                    </button>
+                  </h2>
+                  <div
+                    id="question-two"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#questions"
+                  >
+                    <div class="accordion-body">
+                      At Agutu Interior and Design, we believe in creating spaces that are not only beautiful but also functional. Our designs are tailored to meet the unique needs and preferences of each client.
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#question-three"
+                    >
+                      Our Services
+                    </button>
+                  </h2>
+                  <div
+                    id="question-three"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#questions"
+                  >
+                    <div class="accordion-body">
+                      We offer a wide range of services including Gypsum installation, Alluminium works, shower cubic installation, tilling, Painting, cabinate fittings, residential design, commercial design, renovation and remodeling, space planning, and outdoor living spaces. Our team is dedicated to bringing your vision to life.
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#question-four"
+                    >
+                      Our Process
+                    </button>
+                  </h2>
+                  <div
+                    id="question-four"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#questions"
+                  >
+                    <div class="accordion-body">
+                      Our process begins with an in-depth consultation to understand your needs and preferences. We then develop a detailed design plan, oversee the implementation, and conduct a final review to ensure your complete satisfaction.
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#question-five"
+                    >
+                      Contact Us
+                    </button>
+                  </h2>
+                  <div
+                    id="question-five"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#questions"
+                  >
+                    <div class="accordion-body">
+                      Ready to transform your space? Contact Thomca Interior and Design today to schedule your consultation and start your journey towards a beautifully designed environment.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+    </section>
+
+    <section id="instructors" class="p-5 bg-primary">
+      <div class="container">
+        <section class="services">
+            <h2>Our Services</h2>
+            <p>At Agutu Interior and Design, we offer a range of services to make your vision a reality. From interior design consultations to complete home renovations, our team of experts will work with you to create spaces that are both beautiful and functional.</p>
+            <ul>
+                <li>Interior Design Consultation</li>
+                <li>Home Renovations</li>
+                <li>Space Planning</li>
+                <li>Furniture Selection</li>
+                <li>Color and Fabric Coordination</li>
+            </ul>
+        </section>
+        <section class="portfolio">
+            <h2>Our Portfolio</h2>
+            <p>Explore our gallery of completed projects and get inspired by our design solutions. From modern apartments to classic homes, Agutu Interior and Design has experience in transforming a variety of spaces.</p>
+            <img src="https://www.elegantproperties.co.ke/application/files/cache/2de8c05bbc69b980ddc31e8696b887c0.jpg" alt="Portfolio Image 1">
+            <img src="https://www.elegantproperties.co.ke/application/files/7616/5785/5108/8.jpg" alt="Portfolio Image 2">
+            <img src="https://www.elegantproperties.co.ke/application/files/cache/f82eeb49fe63c97d10c3d665f7f441d6.jpg" alt="image">
+            <img src="https://www.elegantproperties.co.ke/application/files/4816/9881/0075/sunpark-9.jpg" alt="image">
+            <img src="https://www.elegantproperties.co.ke/application/files/5016/5785/5108/3.jpg" alt="image">
+            <img src="https://www.elegantproperties.co.ke/application/files/3416/5785/5106/7.jpg" alt="image">
+            
+        </section>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Agutu Interior and Design is a full-service interior design firm dedicated to creating stunning spaces that reflect your personal style. With years of experience in the industry, our team is committed to delivering exceptional design solutions tailored to your needs.</p>
+        </section>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>Ready to start your next project? Get in touch with us to schedule a consultation or to learn more about our services.</p>
+            <address>
+                <p>Email: info@thomca-interior.com</p>
+                <p>Phone: (0799) 7187-00</p>
+                <p>Address: 123 Design Street, kagundo road, obama, ST 12345</p>
+            </address>
+
+        </section>
+
+  <h2 class="text-center text-white">Our Team</h2>
+  <p class="lead text-center text-white mb-5">
+    Meet the dedicated professionals behind agutu Interior Design, committed to transforming spaces with creativity and precision.
+  </p>
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-3">
+      <div class="card bg-light">
+        <div class="card-body text-center">
+          <img
+            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/Z"
+            class="rounded-circle mb-3"
+            alt="Thomas Ochieng"
+          />
+          <h3 class="card-title mb-3">Agutu dennis</h3>
+          <p class="card-text">
+            As the Director of agutu Interior Design, Agutu omondi leads our company with a vision for innovation and excellence. With over 15 years in the industry, his expertise ensures that every project is executed with the highest standards.
+          </p>
+          <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+          <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+          <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+          <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="card bg-light">
+        <div class="card-body text-center">
+          <img
+            src="https://scontent.fnuu1-1.fna.fbcdn.net/v/t39.30808-6/244548191_545319963430015_9167409344359762072_n.jpg?stp=c0.79.206.206a_dst-jpg_p206x206&_nc_cat=101&ccb=1-7&_nc_sid=714c7a&_nc_eui2=AeGQCscp7Jnmd4rw_Q-JXsAwGXAP3Vjr1vcZcA_dWOvW91tJy4Opqy1crqzmEQV0wkW2_7gKzXJTrS9HWQTBisW4&_nc_ohc=AuezvgY8XHsQ7kNvgGIpsJ2&_nc_zt=23&_nc_ht=scontent.fnuu1-1.fna&oh=00_AYDfHQI8wLL6W6bL0vvDNpi-xcF7aOTea1s2a-iOA-eJZw&oe=6698DB0F"
+            class="rounded-circle mb-3"
+            alt="Onyango Otieno"
+          />
+          <h3 class="card-title mb-3">Onyango Otieno</h3>
+          <p class="card-text">
+            As the Lead Designer at Thomca Interior Design, Onyango Otieno brings creativity and a keen eye for detail to every project. His designs are not only aesthetically pleasing but also functional, reflecting the unique needs and tastes of our clients.
+          </p>
+          <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+          <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+          <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+          <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="card bg-light">
+        <div class="card-body text-center">
+          <img
+            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/"
+            class="rounded-circle mb-3"
+            alt="Truphosa Apoyo"
+          />
+          <h3 class="card-title mb-3">Truphosa Apoyo</h3>
+          <p class="card-text">
+            Truphosa Apoyo, our Senior Site Supervisor, ensures that our designs come to life with precision and care. Her dedication to quality control and project management guarantees that every detail is executed flawlessly.
+          </p>
+          <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+          <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+          <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+          <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section class="p-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Contact Info</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Main Location:</span> Homabay-Mbita road
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">director Agutu dennis:</span> (0799) 718700 
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Truphosa oyoo:</span> (0753) 706274
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Email:</span> ()
+                agutudennis1997@gmail.com
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Onyano otieno:</span>
+                0704095646
+                onyangootieno45@gmail.com
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Thomca &copy; 2024 quality and timely service</p>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="enroll"
+      tabindex="-1"
+      aria-labelledby="enrollLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="enrollLabel">Enrollment</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Fill out this form and we will get back to you</p>
+            <form>
+              <div class="mb-3">
+                <label for="first-name" class="col-form-label">
+                  First Name:
+                </label>
+                <input type="text" class="form-control" id="first-name" />
+              </div>
+              <div class="mb-3">
+                <label for="last-name" class="col-form-label">Last Name:</label>
+                <input type="text" class="form-control" id="last-name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email:</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="col-form-label">Phone:</label>
+                <input type="tel" class="form-control" id="phone" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+    <script>
+      mapboxgl.accessToken =
+        'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-71.060982, 42.35725],
+        zoom: 18,
+      })
+    </script>
+  </body>
+</html>
